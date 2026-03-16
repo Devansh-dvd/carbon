@@ -1,0 +1,78 @@
+/* ── Reset ── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --bg-base:       #050a05;
+  --bg-surface:    #0a110a;
+  --bg-raised:     #0f1a0f;
+  --bg-hover:      #142014;
+
+  --green-900:     #071507;
+  --green-800:     #0d2b0d;
+  --green-700:     #133d13;
+  --green-600:     #1a5c1a;
+  --green-500:     #22801a;
+  --green-400:     #2ea82a;
+  --green-300:     #39d434;
+  --green-200:     #6ee86a;
+  --green-100:     #a8f5a5;
+  --green-50:      #e0fde0;
+
+  --text-primary:  #c8f7c5;
+  --text-secondary:#7ab878;
+  --text-muted:    #3d6b3a;
+  --text-dim:      #1e3d1b;
+
+  --border-dim:    rgba(57, 212, 52, 0.10);
+  --border-mid:    rgba(57, 212, 52, 0.22);
+  --border-bright: rgba(57, 212, 52, 0.45);
+  --glow-sm:       0 0 8px rgba(57, 212, 52, 0.25);
+  --glow-md:       0 0 20px rgba(57, 212, 52, 0.20);
+  --glow-lg:       0 0 40px rgba(57, 212, 52, 0.15);
+
+  --font-mono:     'Share Tech Mono', monospace;
+  --font-body:     'Exo 2', sans-serif;
+
+  --radius-sm:     4px;
+  --radius-md:     8px;
+  --radius-lg:     12px;
+}
+
+html, body {
+  background: var(--bg-base);
+  color: var(--text-primary);
+  font-family: var(--font-body);
+  font-size: 15px;
+  line-height: 1.6;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+body {
+  background-image:
+    radial-gradient(ellipse 80% 50% at 50% -10%, rgba(34, 128, 26, 0.12) 0%, transparent 60%),
+    repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 39px,
+      rgba(57, 212, 52, 0.025) 39px,
+      rgba(57, 212, 52, 0.025) 40px
+    ),
+    repeating-linear-gradient(
+      90deg,
+      transparent,
+      transparent 39px,
+      rgba(57, 212, 52, 0.025) 39px,
+      rgba(57, 212, 52, 0.025) 40px
+    );
+  background-attachment: fixed;
+}
+
+/* ── Scrollbar ── */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--bg-base); }
+::-webkit-scrollbar-thumb { background: var(--green-700); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: var(--green-500); }
+
+/* ── Selection ── */
+::selection { background: rgba(57, 212, 52, 0.25); color: var(--green-50); }
