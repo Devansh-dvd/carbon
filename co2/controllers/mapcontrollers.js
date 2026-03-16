@@ -69,7 +69,6 @@ export const registerVehicle = async (req, res) => {
       evRange
     );
 
-    // Find best route
     const bestRoute = routes.reduce((min, route) => {
       return (route.distanceKm / mileageKmpl) * 2.31 < (min.distanceKm / mileageKmpl) * 2.31
         ? route
